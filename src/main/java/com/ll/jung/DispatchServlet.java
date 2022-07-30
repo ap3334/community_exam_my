@@ -1,5 +1,6 @@
 package com.ll.jung;
 
+import com.ll.jung.article.ArticleController;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -16,9 +17,32 @@ public class DispatchServlet extends HttpServlet {
 
         Rq rq = new Rq(req, resp);
 
+        ArticleController articleController = new ArticleController();
+
         switch (rq.getMethod()) {
             case "GET":
 
+                switch (rq.getActionPath()) {
+                    case "/usr/article/list":
+
+                        break;
+
+                    case "/usr/article/delete":
+
+                        break;
+
+                    case "/usr/article/write":
+
+                        break;
+
+                    case  "/usr/article/detail":
+
+                        break;
+
+                    case "/usr/article/modify":
+
+                        break;
+                }
 
                 break;
 
