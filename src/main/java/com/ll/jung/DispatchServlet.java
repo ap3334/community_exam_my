@@ -24,7 +24,7 @@ public class DispatchServlet extends HttpServlet {
 
                 switch (rq.getActionPath()) {
                     case "/usr/article/list":
-
+                        articleController.showList(rq);
                         break;
 
                     case "/usr/article/delete":
