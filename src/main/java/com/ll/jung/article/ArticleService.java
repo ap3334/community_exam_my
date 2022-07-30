@@ -11,4 +11,10 @@ public class ArticleService {
     public List<ArticleDto> findAll() {
         return articleRepository.findAll();
     }
+
+    public long write(String title, String body) {
+
+        return articleRepository.write(title, body);
+
+    }
 }

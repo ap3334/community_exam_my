@@ -26,7 +26,7 @@ public class ArticleRepository {
         } );
     }
 
-    private static long write(String title, String body) {
+    public static long write(String title, String body) {
 
         id++;
 
