@@ -14,6 +14,22 @@ public class DispatchServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        Rq rq = new Rq(req, resp);
+
+        switch (rq.getMethod()) {
+            case "GET":
+
+
+                break;
+
+            case "POST":
+
+
+                break;
+
+        }
+
+
 
 
     }
