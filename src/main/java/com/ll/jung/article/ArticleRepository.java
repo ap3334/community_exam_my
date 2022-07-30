@@ -22,8 +22,19 @@ public class ArticleRepository {
         IntStream.rangeClosed(1, 10).forEach(id -> {
             String title = "제목%d".formatted(id);
             String body = "내용%d".formatted(id);
-//            write(title, body);
+            write(title, body);
         } );
+    }
+
+    private static long write(String title, String body) {
+
+        id++;
+
+        ArticleDto articleDto = new ArticleDto(id, title, body);
+
+        articleDtoList.add(articleDto);
+
+        return id;
     }
 
     public List<ArticleDto> findAll() {
